@@ -8,11 +8,11 @@
 #######################################################################
 # ******************************************************************* #
 # *                                                                 * #
-# *                   Autor:  Eulogio López Cayuela                 * #
+# *                   Autor:  Eulogio LÃ³pez Cayuela                 * #
 # *                                                                 * #
 # *      Clase que simula el retraso en una recepcion de video      * #
 # *                                                                 * #
-# *            OpenCV    Versión 1.1   Fecha: 10/07/2018            * #
+# *            OpenCV    VersiÃ³n 1.1   Fecha: 10/07/2018            * #
 # *                                                                 * #
 # ******************************************************************* #
 #######################################################################
@@ -31,7 +31,7 @@ import random
 
 class  Video_Signal_Delay():
     '''
-    PERMITE SIMULAR UN RETRASO EN LA RECEPCION DE UNA SEÑAL DE VIDEO
+    PERMITE SIMULAR UN RETRASO EN LA RECEPCION DE UNA SEÃ‘AL DE VIDEO
 
     Ejemplo de uso:
     mi_camara = Video_Signal_Delay(camara_id, retraso_video = 10, framerate = 4.0, color=False, size=(320,240), ruido=True), donde:
@@ -40,22 +40,22 @@ class  Video_Signal_Delay():
                         que queremos usar
                         por si hay mas de una camara conectada
 
-     - retraso_video :  tiempo ens egundos que se retrasa la señal
+     - retraso_video :  tiempo ens egundos que se retrasa la seÃ±al
                         Si el retraso es cero, la imagen simplemetne cambia el framerate respecto a la original
 
-     - framerate:       numero de framnes por segundo de la señal en diferido
+     - framerate:       numero de framnes por segundo de la seÃ±al en diferido
 
      - color :          si False,  procesa la imagen y la devuelve en gris
 
      - size(x,y) :      si se da una resocucion valida,  procesa la imagen y la devuelve de menos resolucion
 
-     - ruido:           si True, se añade ruido aleatoriakmente a la señal de video remota, (solo si es procesada)
+     - ruido:           si True, se aÃ±ade ruido aleatoriakmente a la seÃ±al de video remota, (solo si es procesada)
 
     Para interactuar con esta clase disponemos de dos metodos:
 
-     - raw()           --> nos devuelve el video en directo en tamaño original (solo el video)
+     - raw()           --> nos devuelve el video en directo en tamaÃ±o original (solo el video)
      
-     - read()           --> nos devuelve el video en directo en tamaño original y el 'ret' como lo hace la clase origial de openCV
+     - read()           --> nos devuelve el video en directo en tamaÃ±o original y el 'ret' como lo hace la clase origial de openCV
      
      - video_remoto()   --> nos devuelve el video con un tiempo de retraso (procesado y con ruido si procede)
     '''
@@ -63,7 +63,7 @@ class  Video_Signal_Delay():
     def __init__(self, camara_id, retraso_video = 10, framerate = 4.0, color=False, size=(320,240), ruido=True):
         self.buffer_size = int(retraso_video*framerate)+ 1              # (nos aseguramos que nunca sea cero)
         self.intervalo_refresco = float(1.0/framerate)                  # periodicidad con que se rerescan los datos del buffer de video
-        self.momento_refresco = time.time() + self.intervalo_refresco   # momento en que se debe sacar y añadir informacion al buffer de video
+        self.momento_refresco = time.time() + self.intervalo_refresco   # momento en que se debe sacar y aÃ±adir informacion al buffer de video
         time.sleep(self.intervalo_refresco)                             # pausa de seguridad para la generacion del buffer
         self.video_buffer = []                                          # definir el buffer como una lista
         self.Flag_color = color                                         # si False,  procesa la imagen y la devuelve en gris        
@@ -78,7 +78,7 @@ class  Video_Signal_Delay():
       
         # control del ruido
         self.duracion_interferencia = (2,14)                            # tiempo en segundos que puede llegar a durar una interferencia
-        self.tiempo_entre_interferencias = (25, 45)                     # periodos de señal sin interferencias (de 25 a 45 segundos)
+        self.tiempo_entre_interferencias = (25, 45)                     # periodos de seÃ±al sin interferencias (de 25 a 45 segundos)
         self.FLAG_ruido_activo = ruido                                  # Si True se activan las interferencias en momentos aleatorios
         self.FLAG_aplicar_ruido_ahora = True                            # si FLAG_ruido_activo = True, indica si es momento o no de meter una interferencia
 
