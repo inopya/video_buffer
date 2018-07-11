@@ -24,6 +24,7 @@ Simula el retraso en la recepcion de una señal de video
                         en OPENCV el ruido puede añadirse a las imagenes en color y sin reescalar
 
     Para interactuar con esta clase disponemos de dos metodos:
-     - read()           --> OPENCV, nos devuelve el video en directo en tamaño original
+     - raw()            --> OPENCV, nos devuelve el video en directo en tamaño original (solo el video)
+     - read()           --> OPENCV, nos devuelve el 'ret' y el video en directo en tamaño original
      - getimage()       --> SIMPLECV,  nos devuelve el video en directo en tamaño original
      - video_remoto()   --> COMUN, nos devuelve el video con un tiempo de retraso (procesado y con ruido si procede)
