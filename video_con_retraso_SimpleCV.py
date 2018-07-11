@@ -79,7 +79,7 @@ camara_id = 0           # camara_id  (numero de dispositivo, por si se tienen va
 
 
 # Definir una instancia a la camara extraplanetaria
-webCam =  Video_Signal_Delay(camara_id, retraso_video, framerate, color=False, size=(320,91), ruido=True)
+webCam =  Video_Signal_Delay(camara_id, retraso_video, framerate, color=False, size=(320,240), ruido=True)
 
 
 while True:
@@ -96,7 +96,7 @@ while True:
     # DEBUG  mostrar al mismo tiempo la imagen en diferido (Izquierda)
     # y la imagen en directo (Derecha)
     # ****  ojo para la vista dual la imagen en dirteco se ha de reescaalr igual que la retrasada ****
-    dual_view = imagen_diferido.sideBySide(imagen_directo.resize(320, 91)) 
+    dual_view = imagen_diferido.sideBySide(imagen_directo.resize(320, 240)) 
 
 
     # Mostar la imagen de la camara
