@@ -70,7 +70,7 @@ camara_id = 0           # camara_id  0numero de dispositivo, por si se tienen va
 
 
 # Definir una instancia a la camara extraplanetaria
-webCam =  Video_Signal_Delay(camara_id, retraso_video, framerate, color=True, size=(320,240), ruido=True)
+webCam =  Video_Signal_Delay(camara_id, retraso_video, framerate, color=False, size=(320,240), ruido=True)
 
 
 
