@@ -18,7 +18,11 @@ Simula el retraso en la recepcion de una señal de video
      - retraso_video :  tiempo ens egundos que se retrasa la señal
                         Si el retraso es cero, la imagen simplemetne cambia el framerate respecto a la original
      - framerate:       numero de framnes por segundo de la señal en diferido
-     - procesar :       si True,  procesa la imagen y la devuelve en gris y de menos resolucion
+     
+     - color :          si False,  procesa la imagen y la devuelve en gris
+
+     - size(x,y) :      si se da una resocucion valida,  procesa la imagen y la reescala
+
      - ruido:           si True, se añade ruido aleatoriakmente a la señal de video remota
                         SIMPLECV solo añade ruido si la imagen es procesada  (reescalada y convertida a grises)
                         en OPENCV el ruido puede añadirse a las imagenes en color y sin reescalar
