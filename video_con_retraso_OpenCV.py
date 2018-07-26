@@ -42,7 +42,7 @@
 
      - size(x,y) :      si se da una resocucion valida,  procesa la imagen y la devuelve reescalada
 
-     - ruido:           si True, se añade ruido aleatoriakmente a la señal de video remota
+     - ruido:           si True, se añade ruido aleatoriamente a la señal de video remota
 
 
     Para interactuar con esta clase disponemos de dos metodos:
