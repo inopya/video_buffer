@@ -47,9 +47,9 @@ class  Video_Signal_Delay():
 
      - color :          si False,  procesa la imagen y la devuelve en gris
 
-     - size(x,y) :      si se da una resocucion valida,  procesa la imagen y la devuelve de menos resolucion
+     - size(x,y) :      si se da una resocucion valida, procesa la imagen y la reescala
 
-     - ruido:           si True, se añade ruido aleatoriakmente a la señal de video remota, (solo si es procesada)
+     - ruido:           si True, se añade ruido aleatoriamente a la señal de video remota, (solo si es procesada)
 
     Para interactuar con esta clase disponemos de dos metodos:
 
